@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kusumika Ghosh | Postdoctoral Researcher</title>
+<meta name="description" content="Kusumika Ghosh is a postdoctoral researcher at the Ireland India Institute, Dublin City University, working on social movements, feminist activism, citizenship, and urban studies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream: #FAF7F2;
+  --warm-white: #FFFFFF;
+  --surface: #F3EEE7;
+  --surface-2: #EDE5DA;
+  --border: #DDD5C8;
+  --border-dark: #C8BFB0;
+  --neon-green: #1E9E3A;
+  --neon-green-bright: #2DB84B;
+  --neon-pink: #E8184A;
+  --neon-cyan: #008EAA;
+  --neon-yellow: #C47F00;
+  --ink: #1A1612;
+  --ink-mid: #4A4238;
+  --muted: #7A6E64;
+  --dimmed: #A89E94;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(250,247,242,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem; height: 56px;
+}
+.nav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px; font-weight: 600; color: var(--ink);
+  letter-spacing: 0.02em; text-decoration: none;
+}
+.nav-name em { color: var(--neon-green); font-style: italic; }
+.nav-links { display: flex; gap: 1.6rem; list-style: none; }
+.nav-links a {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--neon-green); }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--ink); }
+
+/* HERO */
+#about {
+  min-height: 100vh; padding-top: 56px;
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.hero-left {
+  padding: 5rem 3rem 5rem 4rem;
+  display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid var(--border);
+  background: var(--warm-white);
+  position: relative; overflow: hidden;
+}
+.hero-left::before {
+  content: 'K';
+  position: absolute; bottom: -0.15em; right: -0.05em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32vw; font-weight: 600; color: transparent;
+  -webkit-text-stroke: 1px rgba(45,184,75,0.08);
+  line-height: 1; pointer-events: none; z-index: 0;
+}
+.hero-left > * { position: relative; z-index: 1; }
+.hero-right {
+  padding: 5rem 3.5rem 5rem 3rem;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--cream); gap: 1.5rem;
+}
+
+/* Photo */
+.photo-wrap {
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--border);
+  flex-shrink: 0;
+  margin-bottom: 0.5rem;
+}
+.photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--neon-green); margin-bottom: 0.5rem;
+}
+.hero-tag::before {
+  content: ''; display: block; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--neon-green); box-shadow: 0 0 8px rgba(45,184,75,0.5);
+  animation: pulse 2.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 8px rgba(45,184,75,0.5); }
+  50% { box-shadow: 0 0 3px rgba(45,184,75,0.2); }
+}
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 500;
+  line-height: 1.0; color: var(--ink); letter-spacing: -0.02em; margin-bottom: 0.25rem;
+}
+h1 span { display: block; color: var(--neon-green); text-shadow: 0 0 30px rgba(45,184,75,0.2); }
+.hero-pronouns { font-size: 12px; color: var(--dimmed); letter-spacing: 0.06em; }
+.hero-role {
+  font-size: 0.88rem; color: var(--muted); line-height: 1.6;
+  padding-left: 1rem; border-left: 2px solid var(--neon-pink);
+}
+.hero-role strong { color: var(--ink); display: block; font-weight: 500; }
+.hero-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.btn {
+  font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 20px;
+  text-decoration: none; transition: all 0.15s; display: inline-block; cursor: pointer; border: none;
+}
+.btn-neon {
+  background: var(--neon-green); color: white;
+  clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+}
+.btn-neon:hover { background: var(--neon-green-bright); box-shadow: 0 0 20px rgba(45,184,75,0.35); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent; color: var(--ink-mid); border: 1px solid var(--border-dark);
+  clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+}
+.btn-outline:hover { border-color: var(--neon-cyan); color: var(--neon-cyan); }
+
+.hero-bio { font-size: 0.97rem; color: var(--ink-mid); line-height: 1.8; }
+.research-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.rtag {
+  font-size: 11px; font-weight: 500; padding: 5px 12px;
+  border: 1px solid var(--border); color: var(--muted); background: var(--warm-white);
+  letter-spacing: 0.04em; transition: all 0.15s;
+}
+.rtag:hover { border-color: var(--neon-green); color: var(--neon-green); }
+
+/* SECTIONS */
+.section-wrap { max-width: 920px; margin: 0 auto; padding: 5.5rem 2rem; }
+.section-header {
+  display: flex; align-items: baseline; gap: 1rem;
+  margin-bottom: 3rem; padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border); position: relative;
+}
+.section-header::after {
+  content: ''; position: absolute; bottom: -1px; left: 0;
+  width: 60px; height: 2px; background: var(--neon-green);
+}
+.section-num { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; color: var(--neon-green); opacity: 0.7; }
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 500; color: var(--ink); letter-spacing: -0.01em;
+}
+
+/* EDUCATION */
+#education { background: var(--warm-white); border-top: 1px solid var(--border); }
+.edu-item {
+  display: grid; grid-template-columns: 180px 1fr; gap: 0 2rem;
+  padding: 1.75rem 0; border-bottom: 1px solid var(--border); align-items: start;
+}
+.edu-item:last-child { border-bottom: none; }
+.edu-meta { font-size: 12px; color: var(--muted); line-height: 1.65; padding-top: 0.15rem; }
+.edu-meta strong { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; color: var(--neon-cyan); margin-bottom: 2px; }
+.edu-degree { font-family: 'Cormorant Garamond', serif; font-size: 1.12rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; line-height: 1.3; }
+.edu-institution { font-size: 0.88rem; color: var(--ink-mid); font-weight: 500; margin-bottom: 0.4rem; }
+.edu-detail { font-size: 0.87rem; color: var(--muted); line-height: 1.65; list-style: none; }
+.edu-detail li { padding-left: 1rem; position: relative; margin-top: 0.2rem; }
+.edu-detail li::before { content: '—'; position: absolute; left: 0; color: var(--dimmed); }
+.edu-award {
+  display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 2px 8px; margin-bottom: 0.4rem;
+  background: rgba(196,127,0,0.12); color: var(--neon-yellow); border: 1px solid rgba(196,127,0,0.25);
+}
+
+/* RESEARCH */
+#research { background: var(--cream); border-top: 1px solid var(--border); }
+.pub-group { margin-bottom: 2.75rem; }
+.pub-group-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--neon-cyan); margin-bottom: 1.25rem; padding-left: 1rem; border-left: 2px solid var(--neon-cyan);
+}
+.pub-item {
+  padding: 1.4rem 0; border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: 40px 1fr; gap: 0 1.25rem; align-items: start; transition: background 0.15s;
+}
+.pub-item:hover { background: rgba(45,184,75,0.03); }
+.pub-item:last-child { border-bottom: none; }
+.pub-year { font-size: 11px; color: var(--dimmed); font-weight: 500; padding-top: 0.25rem; }
+.pub-title { font-family: 'Cormorant Garamond', serif; font-size: 1.08rem; font-weight: 600; color: var(--ink); line-height: 1.4; margin-bottom: 0.3rem; }
+.pub-meta { font-size: 0.84rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.45rem; }
+.pub-note { font-size: 0.83rem; color: var(--dimmed); font-style: italic; margin-bottom: 0.45rem; line-height: 1.55; }
+.pub-links { display: flex; gap: 1rem; }
+.pub-links a { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--neon-green); text-decoration: none; }
+.pub-links a:hover { opacity: 0.7; }
+.badge { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; margin-bottom: 0.35rem; }
+.badge-review { background: rgba(232,24,74,0.1); color: var(--neon-pink); border: 1px solid rgba(232,24,74,0.25); }
+.badge-wip { background: rgba(45,184,75,0.1); color: var(--neon-green); border: 1px solid rgba(45,184,75,0.25); }
+.badge-mono { background: rgba(0,142,170,0.1); color: var(--neon-cyan); border: 1px solid rgba(0,142,170,0.25); }
+
+/* EXPERIENCE */
+#experience { background: var(--warm-white); border-top: 1px solid var(--border); }
+.exp-item {
+  display: grid; grid-template-columns: 180px 1fr; gap: 0 2rem;
+  padding: 1.6rem 0; border-bottom: 1px solid var(--border); align-items: start;
+}
+.exp-item:last-child { border-bottom: none; }
+.exp-meta { font-size: 12px; color: var(--muted); line-height: 1.65; }
+.exp-meta strong { display: block; font-size: 11px; font-weight: 600; color: var(--neon-cyan); letter-spacing: 0.03em; margin-bottom: 2px; }
+.exp-title { font-family: 'Cormorant Garamond', serif; font-size: 1.08rem; font-weight: 600; color: var(--ink); margin-bottom: 0.3rem; line-height: 1.35; }
+.exp-org { font-size: 0.88rem; color: var(--ink-mid); font-weight: 500; margin-bottom: 0.4rem; }
+.exp-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.7; list-style: none; }
+.exp-desc li { padding-left: 1rem; position: relative; margin-top: 0.2rem; }
+.exp-desc li::before { content: '—'; position: absolute; left: 0; color: var(--dimmed); }
+
+/* TEACHING */
+#teaching { background: var(--cream); border-top: 1px solid var(--border); }
+.teaching-item {
+  display: grid; grid-template-columns: 180px 1fr; gap: 0 2rem;
+  padding: 1.6rem 0; border-bottom: 1px solid var(--border); align-items: start;
+}
+.teaching-item:last-child { border-bottom: none; }
+.t-meta { font-size: 12px; color: var(--muted); line-height: 1.65; }
+.t-meta strong { display: block; color: var(--neon-yellow); font-weight: 600; font-size: 11px; letter-spacing: 0.04em; margin-bottom: 2px; }
+.t-title { font-family: 'Cormorant Garamond', serif; font-size: 1.08rem; font-weight: 600; color: var(--ink); margin-bottom: 0.45rem; line-height: 1.35; }
+.t-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.7; list-style: none; }
+.t-desc li { padding-left: 1rem; position: relative; margin-top: 0.2rem; }
+.t-desc li::before { content: '—'; position: absolute; left: 0; color: var(--dimmed); }
+
+/* PUBLIC SCHOLARSHIP */
+#scholarship { background: var(--warm-white); border-top: 1px solid var(--border); }
+.scholar-item { padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
+.scholar-item:last-child { border-bottom: none; }
+.scholar-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.08rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; line-height: 1.35; }
+.scholar-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+.conf-item { padding: 0.8rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 40px 1fr; gap: 0 1rem; }
+.conf-item:last-child { border-bottom: none; }
+.conf-year { font-size: 11px; color: var(--dimmed); font-weight: 500; padding-top: 0.2rem; }
+.conf-detail { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+.conf-detail strong { color: var(--ink-mid); font-weight: 500; display: block; }
+
+/* CV */
+#cv { background: var(--cream); border-top: 1px solid var(--border); }
+.cv-inner {
+  max-width: 520px; margin: 0 auto; text-align: center;
+  padding: 3rem; border: 1px solid var(--border); position: relative; overflow: hidden;
+}
+.cv-inner::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-green), var(--neon-cyan));
+}
+.cv-inner p { color: var(--muted); margin-bottom: 2rem; }
+
+/* CONTACT */
+#contact { background: var(--warm-white); border-top: 1px solid var(--border); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.c-block { padding: 2rem; background: var(--cream); transition: background 0.15s; }
+.c-block:hover { background: var(--surface); }
+.c-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--neon-pink); margin-bottom: 0.6rem; }
+.c-value { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.7; }
+.c-value a { color: var(--neon-cyan); text-decoration: none; transition: opacity 0.15s; }
+.c-value a:hover { opacity: 0.7; }
+.c-value strong { color: var(--ink); font-weight: 500; }
+
+/* FOOTER */
+footer {
+  background: var(--surface-2); border-top: 1px solid var(--border);
+  text-align: center; padding: 2.5rem 2rem;
+  font-size: 12px; color: var(--dimmed); letter-spacing: 0.04em;
+}
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--neon-green); }
+footer span { margin: 0 0.5rem; color: var(--border-dark); }
+
+/* MOBILE */
+@media (max-width: 820px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column; gap: 0;
+    position: fixed; top: 56px; left: 0; right: 0;
+    background: var(--cream); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem 1.5rem;
+  }
+  .nav-links.open a { padding: 0.65rem 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .nav-toggle { display: block; }
+  #about { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 4rem 1.5rem 2.5rem; border-right: none; border-bottom: 1px solid var(--border); }
+  .hero-right { padding: 2.5rem 1.5rem 4rem; }
+  .section-wrap { padding: 3.5rem 1.25rem; }
+  .edu-item, .exp-item, .teaching-item { grid-template-columns: 1fr; gap: 0.4rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+  /* Visible focus rings for keyboard navigation */
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--neon-green);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  a:focus:not(:focus-visible),
+  button:focus:not(:focus-visible) { outline: none; }
+
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav>
+  <a class="nav-name" href="#about">Kusumika <em>Ghosh</em></a>
+  <ul class="nav-links" id="navLinks" role="list">
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#education" onclick="closeNav()">Education</a></li>
+    <li><a href="#research" onclick="closeNav()">Research</a></li>
+    <li><a href="#experience" onclick="closeNav()">Experience</a></li>
+    <li><a href="#teaching" onclick="closeNav()">Teaching</a></li>
+    <li><a href="#scholarship" onclick="closeNav()">Public Work</a></li>
+    <li><a href="#cv" onclick="closeNav()">CV</a></li>
+    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+</nav>
+
+<main id="main-content">
+<!-- HERO -->
+<section id="about" aria-label="About Kusumika Ghosh">
+  <div class="hero-left" aria-hidden="false">
+    <span class="hero-tag">Postdoctoral Researcher · DCU</span>
+    <h1>Kusumika<span>Ghosh</span></h1>
+    <p class="hero-pronouns">she / her</p>
+    <div class="hero-role" style="margin: 1rem 0 1.5rem;">
+      <strong>Ireland India Institute</strong>
+      Dublin City University, Ireland
+    </div>
+    <div class="hero-links">
+      <a class="btn btn-neon" href="#research">Research</a>
+      <a class="btn btn-outline" href="#contact">Contact</a>
+      <a class="btn btn-outline" href="https://scholar.google.com/citations?user=NlEqptoAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar profile (opens in new tab)">Scholar ↗</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="photo-wrap">
+      <img src="photo.jpg" alt="Kusumika Ghosh, Postdoctoral Researcher at the Ireland India Institute, Dublin City University">
+    </div>
+    <p class="hero-bio">
+      I am a postdoctoral researcher at the Ireland India Institute, Dublin City University. My work examines social movements, feminist activism, and the politics of citizenship — with a particular focus on India, South Asia, and transnational feminist organising.
+    </p>
+    <p class="hero-bio">
+      My research asks how ordinary people — especially women and marginalised communities — claim political voice, build solidarity, and reimagine what belonging and care can mean in contested democratic spaces. I draw on ethnographic fieldwork, archival methods, and feminist theory.
+    </p>
+    <div class="research-tags">
+      <span class="rtag">Social movements</span>
+      <span class="rtag">Feminist activism</span>
+      <span class="rtag">Citizenship</span>
+      <span class="rtag">Politics of care</span>
+      <span class="rtag">Urban studies</span>
+      <span class="rtag">Anti-gender movements</span>
+      <span class="rtag">South Asia</span>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" aria-labelledby="heading-education">
+  <div class="section-wrap">
+    <div class="section-header"><span class="section-num">01</span><h2 id="heading-education">Education</h2></div>
+
+    <div class="edu-item">
+      <div class="edu-meta"><strong>Awarded Oct 2025</strong>Dublin, Ireland</div>
+      <div>
+        <p class="edu-degree">Doctor of Philosophy (PhD)</p>
+        <p class="edu-institution">Dublin City University (DCU), Ireland</p>
+        <ul class="edu-detail">
+          <li>Thesis: <em>Gendered Citizenship in India: Participation and Protest as Acts of Care in the Anti-CAA/NRC Movement</em></li>
+          <li>Fully funded by the Ireland India Institute and Faculty of Humanities &amp; Social Sciences, DCU</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-meta"><strong>2016 – 2018</strong>Mumbai, India</div>
+      <div>
+        <span class="edu-award">🏅 Institute Gold Medallist</span>
+        <p class="edu-degree">MA, Peace and Conflict Studies</p>
+        <p class="edu-institution">Tata Institute of Social Sciences (TISS), India</p>
+        <ul class="edu-detail">
+          <li>Thesis: <em>Gender, Migration, and Postcolonial Memory: The Impact of the 1947 Indian Partition on Women</em></li>
+          <li>Research based on in-depth interviews</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-meta"><strong>2013 – 2016</strong>Kolkata, India</div>
+      <div>
+        <span class="edu-award">Cum Laude</span>
+        <p class="edu-degree">BA (Hons), Political Science</p>
+        <p class="edu-institution">St. Xavier's College, India</p>
+        <ul class="edu-detail">
+          <li>Thesis on women's participation in militant organisations (LTTE, Maoists, ISIS)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-meta"><strong>Grade A</strong>Kolkata, India</div>
+      <div>
+        <p class="edu-degree">Diploma, Human Rights Education</p>
+        <p class="edu-institution">St. Xavier's College, Kolkata</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" aria-labelledby="heading-research">
+  <div class="section-wrap">
+    <div class="section-header"><span class="section-num">02</span><h2 id="heading-research">Research &amp; Publications</h2></div>
+
+    <div class="pub-group">
+      <p class="pub-group-label">Peer-reviewed journal articles</p>
+      <div class="pub-item">
+        <span class="pub-year">2025</span>
+        <div>
+          <p class="pub-title">Strategic adaptations across borders: Mapping transnational anti-gender movements in political, institutional, and digital domains</p>
+          <p class="pub-meta">Ghosh, K., Gregorić, M., &amp; Kuteleva, A. · <em>Politikon: The IAPSS Journal of Political Science</em>, 59(2), 2–6</p>
+          <div class="pub-links"><a href="https://doi.org/10.22151/politikon.42025.0" target="_blank" rel="noopener">DOI ↗</a></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">2025</span>
+        <div>
+          <p class="pub-title">The global rise of anti-gender movements and feminist resistance strategies: A critical analysis</p>
+          <p class="pub-meta">Gregorić, M., Ghosh, K., &amp; Kuteleva, A. · <em>Politikon: The IAPSS Journal of Political Science</em>, 59(1)</p>
+          <div class="pub-links"><a href="https://doi.org/10.22151/politikon.12025.0" target="_blank" rel="noopener">DOI ↗</a></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">2020</span>
+        <div>
+          <p class="pub-title">How protected are the refugees: A comparative study of the contemporary states of Germany and India in light of the Geneva Convention 1951</p>
+          <p class="pub-meta">Ghosh, K. · <em>Refugee Watch</em>, (56)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-group">
+      <p class="pub-group-label">Editorial roles</p>
+      <div class="pub-item">
+        <span class="pub-year">2025</span>
+        <div>
+          <p class="pub-title">Special issue on anti-gender backlash (two-part)</p>
+          <p class="pub-meta">Co-editor (one of three editors) · <em>Politikon: The IAPSS Journal of Political Science</em></p>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">2021</span>
+        <div>
+          <p class="pub-title">Women and Peacebuilding: Perspectives from the Field</p>
+          <p class="pub-meta">Tula, M., &amp; Ghosh, K. (Eds.) · NESRC Peace Studies Series, Vol. 15. North Eastern Social Research Centre, Guwahati</p>
+          <p class="pub-note">Convened the originating seminar; edited selected contributions from feminist activists and scholars.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-group">
+      <p class="pub-group-label">Book</p>
+      <div class="pub-item">
+        <span class="pub-year">2019</span>
+        <div>
+          <p class="pub-title">Landscape of Conflicts and Peace in the Northeast: The Role of Religion</p>
+          <p class="pub-meta">Fernandes, W., Ghosh, K., et al. · NESRC Peace Studies Series, Vol. 14</p>
+          <p class="pub-note">Authored 5 of 7 chapters; co-authored remaining chapters; conceptualised project, led fieldwork, and conducted SPSS-based analysis with a research team.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-group">
+      <p class="pub-group-label">Under review &amp; in progress</p>
+      <div class="pub-item">
+        <span class="pub-year">—</span>
+        <div>
+          <span class="badge badge-review">Under Review</span>
+          <p class="pub-title">The Affective Republic: A Prefiguration of Southern Citizenship</p>
+          <p class="pub-meta">Ghosh, K. · Under review at a Q1 journal of theory</p>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">—</span>
+        <div>
+          <span class="badge badge-wip">Working Paper</span>
+          <p class="pub-title">Art and resistance: Space-making as an act of care in contentious politics</p>
+          <p class="pub-meta">Ghosh, K. &amp; Torres Lopez, Y. · Selected for ISA RC21 Vienna 2026 — Inequalities &amp; the City</p>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">—</span>
+        <div>
+          <span class="badge badge-mono">Monograph in development</span>
+          <p class="pub-title">Feminising the Movement: Women, Citizenship, and Protest in Contemporary India</p>
+          <p class="pub-meta">Ghosh, K. · Based on PhD research; under active development for submission to a university press</p>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">—</span>
+        <div>
+          <span class="badge badge-wip">Project Development</span>
+          <p class="pub-title">The Politics of Care in Crisis Governance</p>
+          <p class="pub-meta">Care as political infrastructure in postcolonial states; proposed fieldwork in India and Ireland; prospective ERC Starting Grant pathway</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" aria-labelledby="heading-experience">
+  <div class="section-wrap">
+    <div class="section-header"><span class="section-num">03</span><h2 id="heading-experience">Research &amp; Professional Experience</h2></div>
+
+    <div class="exp-item">
+      <div class="exp-meta"><strong>Sep 2025 – Present</strong>Dublin, Ireland</div>
+      <div>
+        <p class="exp-title">Postdoctoral Research Fellow</p>
+        <p class="exp-org">Ireland India Institute (III), Dublin City University</p>
+        <ul class="exp-desc">
+          <li>Funded fellowship to expand and publish cross-cutting research on movements, gender and urban development in Ireland, India, and Mexico</li>
+          <li>Institute administration including website and social media; organising team member of the III Annual South Asia Conferences (since 2021)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta"><strong>Mar 2020 – Jan 2021</strong>Kolkata / Vienna</div>
+      <div>
+        <p class="exp-title">Research Assistant</p>
+        <p class="exp-org">Calcutta Research Group (CRG) &amp; Institut für die Wissenschaften vom Menschen (IWM), Vienna</p>
+        <ul class="exp-desc">
+          <li>Supported Europe–Asia Research Platform on Forced Migration; convened international workshop on global protection of migrants and refugees</li>
+          <li>Co-authored reports on COVID-19 impacts on migrant workers; supported Distinguished Chair on Migration and Forced Migration Studies</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta"><strong>2018 – 2019</strong>Northeast India</div>
+      <div>
+        <p class="exp-title">Research Associate</p>
+        <p class="exp-org">North Eastern Social Research Centre (NESRC), India</p>
+        <ul class="exp-desc">
+          <li>Led fieldwork in conflict zones across Northeast India on religion and conflict; organised national seminar on women in conflict zones</li>
+          <li>Research contributed to <em>Landscape of Conflicts and Peace…</em> (2019) and co-edited <em>Women and Peacebuilding</em> (2021)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta"><strong>2019</strong>Delhi, India</div>
+      <div>
+        <p class="exp-title">Research Intern</p>
+        <p class="exp-org">Partition Museum, Delhi</p>
+        <ul class="exp-desc">
+          <li>Conducted oral-history interviews with Partition survivors on a less-studied frontier; contributed to archive and multimedia collection</li>
+          <li>Trained in oral history methods and videography</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-meta"><strong>2017 – 2018</strong>Sundarbans / Southampton</div>
+      <div>
+        <p class="exp-title">Research Intern — DECCMA Project</p>
+        <p class="exp-org">Centre for Environment &amp; Development (CED-ENDEV) &amp; University of Southampton</p>
+        <ul class="exp-desc">
+          <li>Field research in the Sundarbans Delta on trafficking of women and girls after natural disasters</li>
+          <li>Analysis of environmental and structural drivers in forced migration contexts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching" aria-labelledby="heading-teaching">
+  <div class="section-wrap">
+    <div class="section-header"><span class="section-num">04</span><h2 id="heading-teaching">Teaching</h2></div>
+
+    <div class="teaching-item">
+      <div class="t-meta"><strong>Sep 2025 – Jan 2026</strong>Dept of Anthropology<br>Maynooth University</div>
+      <div>
+        <p class="t-title">KD361: The New Silk Route — Development, Democracy and Governance in Contemporary Asia</p>
+        <ul class="t-desc">
+          <li>External Module Lecturer (Module Convenor); 3rd-year UG elective, ~25 students</li>
+          <li>Designed curriculum, assessments, and module AI-use policy from scratch</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="teaching-item">
+      <div class="t-meta"><strong>Jan – May 2025</strong>Dept of International Development<br>Maynooth University</div>
+      <div>
+        <p class="t-title">Planning for Development</p>
+        <ul class="t-desc"><li>External Module Lecturer; undergraduate, Spring term 2024–25</li></ul>
+      </div>
+    </div>
+
+    <div class="teaching-item">
+      <div class="t-meta"><strong>Sep 2023 – Jan 2024</strong>School of Law &amp; Government<br>Dublin City University</div>
+      <div>
+        <p class="t-title">Politics of South Asia</p>
+        <ul class="t-desc">
+          <li>Occasional Lecturer; 3rd-year UG, cohort of ~92 students</li>
+          <li>Designed assessments and delivered all lectures</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="teaching-item">
+      <div class="t-meta"><strong>Sep 2023 – Jan 2024</strong>Dept of International Development<br>Maynooth University</div>
+      <div>
+        <p class="t-title">Gender and International Development</p>
+        <ul class="t-desc">
+          <li>External Module Lecturer; 2nd-year UG</li>
+          <li>Supervised student projects and assessments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="teaching-item">
+      <div class="t-meta"><strong>2021 – 2023</strong>Dublin City University</div>
+      <div>
+        <p class="t-title">Teaching Assistant</p>
+        <ul class="t-desc">
+          <li>Tutorials and grading for Introduction to International Relations and advanced Peace Studies</li>
+          <li>Individual thesis-writing support for final-year UG students</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLIC SCHOLARSHIP -->
+<section id="scholarship" aria-labelledby="heading-scholarship">
+  <div class="section-wrap">
+    <div class="section-header"><span class="section-num">05</span><h2 id="heading-scholarship">Public Scholarship &amp; Presentations</h2></div>
+
+    <div class="scholar-item">
+      <h3>Director of Social Policy &amp; Inequity — Niti Vichaar, India &nbsp;·&nbsp; 2018–Present</h3>
+      <p>Developed and led a certificate training programme in social science research, currently in its 4th cohort. Organised workshops on gender, consent, and conflict resolution; delivered consent workshops (including Loreto College Kolkata, ~85 attendees) and an online public lecture.</p>
+    </div>
+
+    <div class="scholar-item">
+      <h3>Conference Presentations (selected)</h3>
+      <div class="conf-item"><span class="conf-year">2026</span><div class="conf-detail"><strong>International Sociological Association (RC21) · Vienna</strong>Art and resistance: Space-making as an act of care in contentious politics (with Y. Torres Lopez)</div></div>
+      <div class="conf-item"><span class="conf-year">2026</span><div class="conf-detail"><strong>Movements at Manchester: Alternative Futures &amp; Popular Protest · Manchester</strong></div></div>
+      <div class="conf-item"><span class="conf-year">2024</span><div class="conf-detail"><strong>British Association for South Asian Studies (BASAS) Annual Conference · London</strong>"Spaces of Solidarity: Citizenship, Collective Action and Women in Contemporary India"</div></div>
+      <div class="conf-item"><span class="conf-year">2023</span><div class="conf-detail"><strong>International Political Science Association (IPSA) World Congress · Buenos Aires</strong>"Researching Anti-Politics: Methodologies for Studying Women's Leadership in India's Anti-CAA/NRC Movement"</div></div>
+      <div class="conf-item"><span class="conf-year">2022</span><div class="conf-detail"><strong>European International Studies Association (EISA) Pan-European Conference · Athens</strong>"Contesting 'Illiberal' Politics: Citizenship, Gender and Protests in Contemporary India"</div></div>
+    </div>
+
+    <div class="scholar-item">
+      <h3>Invited Seminars</h3>
+      <div class="conf-item"><span class="conf-year">2024</span><div class="conf-detail"><strong>Law and Resistance Research Group, University of Sussex</strong>Autumn Seminar Series on Resistance and Anti-Colonial Struggle — work-in-progress on feminism, nationalism, and indigeneity in Assam</div></div>
+      <div class="conf-item"><span class="conf-year">2020</span><div class="conf-detail"><strong>Calcutta Research Group, India</strong>Annual Research and Orientation Workshop on Global Protection of Refugees and Migrants</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv" aria-labelledby="heading-cv">
+  <div class="section-wrap">
+    <div class="section-header"><span class="section-num">06</span><h2 id="heading-cv">Curriculum Vitae</h2></div>
+    <div class="cv-inner">
+      <p>Full academic CV covering education, publications, conference presentations, teaching, public engagement, and awards.</p>
+      <a class="btn btn-neon" href="cv.pdf" target="_blank">Download CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="heading-contact">
+  <div class="section-wrap">
+    <div class="section-header"><span class="section-num">07</span><h2 id="heading-contact">Contact</h2></div>
+    <div class="contact-grid">
+      <div class="c-block">
+        <p class="c-label">Email</p>
+        <p class="c-value"><a href="mailto:kusumika.ghosh@dcu.ie">kusumika.ghosh@dcu.ie</a></p>
+      </div>
+      <div class="c-block">
+        <p class="c-label">Affiliation</p>
+        <p class="c-value"><strong>Ireland India Institute</strong><br>Dublin City University<br>Dublin, Ireland</p>
+      </div>
+      <div class="c-block">
+        <p class="c-label">Profiles</p>
+        <p class="c-value">
+          <a href="https://scholar.google.com/citations?user=NlEqptoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a><br>
+          <a href="https://orcid.org/0000-0002-3591-8378" target="_blank" rel="noopener">ORCID 0000-0002-3591-8378 ↗</a><br>
+          <a href="https://www.linkedin.com/in/kusumika-ghosh-641428162/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </p>
+      </div>
+      <div class="c-block">
+        <p class="c-label">On the job market</p>
+        <p class="c-value">I welcome enquiries about postdoctoral fellowships, lectureships, and collaborative projects. Please get in touch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  © 2025 Kusumika Ghosh <span>·</span> Ireland India Institute, DCU
+  <span>·</span> <a href="https://scholar.google.com/citations?user=NlEqptoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+  <span>·</span> <a href="https://orcid.org/0000-0002-3591-8378" target="_blank" rel="noopener">ORCID</a>
+  <span>·</span> <a href="https://www.linkedin.com/in/kusumika-ghosh-641428162/" target="_blank" rel="noopener">LinkedIn</a>
+</footer>
+
+<script>function closeNav(){document.getElementById('navLinks').classList.remove('open');}</script>
+</body>
+</html>
