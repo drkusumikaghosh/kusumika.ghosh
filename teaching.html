@@ -210,6 +210,12 @@ footer span{margin:0 .5rem;opacity:.25}
 .music-btn{position:fixed;bottom:1.5rem;right:1.5rem;z-index:500;background:var(--pink);color:white;border:none;border-radius:50%;width:46px;height:46px;font-size:18px;cursor:pointer;box-shadow:0 4px 12px rgba(232,24,74,.4);transition:all .2s;display:flex;align-items:center;justify-content:center}
 .music-btn:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(232,24,74,.55)}
 
+/* FEATURED SECTION */
+.featured-program{margin-top:3rem;padding:2rem;background:linear-gradient(135deg, var(--saffron-pale) 0%, var(--terra-pale) 100%);border-left:4px solid var(--saffron);border-radius:0 4px 4px 0}
+.featured-program h3{font-size:1.2rem;color:var(--saffron-dk);margin-bottom:.75rem;font-weight:600}
+.featured-program p{font-size:.95rem;color:var(--ink-mid);line-height:1.75;margin-bottom:.5rem}
+.featured-program .program-name{font-weight:600;color:var(--ink)}
+
 /* A11Y */
 a:focus-visible,button:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:2px}
 a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline:none}
@@ -314,8 +320,11 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible){outline:none}
     <div><p class="t-card-title">Teaching Assistant</p>
       <p class="t-card-detail">Introduction to International Relations and Peace Studies; thesis support for final-year students.</p></div>
   </div>
-  <div style="margin-top:2.5rem;padding:1.25rem 1.5rem;background:var(--steel-pale);border-left:3px solid var(--steel)">
-    <p style="font-size:.88rem;color:var(--steel-dk);line-height:1.7">I also lead a <a href="https://www.catlearnserv.com/certificate-course-on-research-in-social-sciences/" target="_blank" rel="noopener">Certificate Course on Research in Social Sciences ↗</a> with the Centre for Applied Teaching & Learning in Education & Research (CAT Learn)</p>
+
+  <div class="featured-program">
+    <h3>Curriculum Development & Programme Leadership</h3>
+    <p><span class="program-name">Certificate Training Programme in Social Science Research</span> through <a href="https://www.nitivichaar.org/" target="_blank" rel="noopener">Niti Vichaar ↗</a>, India</p>
+    <p style="font-size:.9rem;color:var(--ink-mid);margin-top:.75rem">Designed and led an intensive training programme for early-career researchers and practitioners across South Asia. This programme is no longer running but remains an important contribution to my teaching and curriculum development experience.</p>
   </div>
 </div>
 </main>
